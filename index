@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle Decorations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2020/06/08/20/50/party-5270415_1280.jpg') no-repeat center center;
+      background-size: cover;
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .service-card {
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Triangle Decorations</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to Triangle Decorations</h1>
+  <p>Making your moments memorable!</p>
+  <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card service-card">
+          <img src="https://cdn.pixabay.com/photo/2017/08/06/07/46/birthday-2580006_1280.jpg" class="card-img-top" alt="Birthday Decoration">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Decoration</h5>
+            <p class="card-text">Beautiful and themed birthday setups to make your day extra special.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card service-card">
+          <img src="https://cdn.pixabay.com/photo/2017/05/10/21/48/ribbon-2309529_1280.jpg" class="card-img-top" alt="Ribbon Cutting Decoration">
+          <div class="card-body">
+            <h5 class="card-title">Ribbon Cutting Decoration</h5>
+            <p class="card-text">Elegant and grand decorations for inauguration ceremonies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="phone" required>
+          </div>
+          <div class="mb-3">
+            <label for="event" class="form-label">Event Type</label>
+            <select class="form-select" id="event" required>
+              <option value="">Select an event</option>
+              <option value="Birthday Decoration">Birthday Decoration</option>
+              <option value="Ribbon Cutting Decoration">Ribbon Cutting Decoration</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message (Optional)</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    &copy; 2025 Triangle Decorations. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
